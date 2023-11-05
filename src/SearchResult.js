@@ -5,7 +5,6 @@ import { Table } from 'react-bootstrap';
 import './App.css'; // Make sure to import your CSS file
 
 
-
 const SearchResults = () => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
@@ -45,6 +44,7 @@ const SearchResults = () => {
           <tr>
             <th>Score</th>
             <th>CSR_ID </th>
+            <th>Description </th>
             {/* Add more table headers as needed */}
           </tr>
         </thead>
@@ -54,6 +54,8 @@ const SearchResults = () => {
             <tr key={result.Score}>
              <td>SearchScore: {result['@search.score']}</td>
               <td>CSR_ID: {result.content.match(/CSR_ID: ([^\n]+)/)[1]}</td>
+              <td> Description:{result.content.match(/Description: ([^\n]+)/)[1]}</td>
+
             </tr>
           ))}
           
