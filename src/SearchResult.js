@@ -19,7 +19,7 @@ const SearchResults = () => {
         {
           headers: {
             'Content-Type': 'application/json',
-            'api-key': '',
+            'api-key': 'KhCytrcE73Lq0sndjHJRjU7H0mxF2gV1FNDPRFt2SSAzSeCPFnQV',
           },
         }
       );
